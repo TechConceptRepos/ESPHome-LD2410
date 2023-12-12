@@ -8,6 +8,9 @@ This repository contains the setup for a human presence sensor designed for ESPH
 + **HLK-LD2410** -  Human Presence Sensor
 + **BH1750** - Ambient Light Sensor
 
+####Schematic
+![](https://raw.githubusercontent.com/TechConceptRepos/ESPHome-LD2410/media/schema.png)
+
 ####Pinout
 
 WeMos D1 Mini |  HLK-LD2410 | BH1750
@@ -160,6 +163,8 @@ binary_sensor:
     has_still_target:
       name: Still Target
 ```
+### Lovelace Card
+![](https://raw.githubusercontent.com/TechConceptRepos/ESPHome-LD2410/media/lovelace_card.png)
 
 ### ESPHome integration for Home Assistant 
 [![Add Integration to your Home Assistant
@@ -169,6 +174,7 @@ instance.](https://my.home-assistant.io/badges/config_flow_start.svg)](https://m
 - https://www.thingiverse.com/thing:6357902
 - https://cults3d.com/en/3d-model/gadget/esphome-ld2410-human-presence-sensor
 You can choose between a long length case (with hidden micro USB connector), a short length case or a wall-mount type.
+![](https://raw.githubusercontent.com/TechConceptRepos/ESPHome-LD2410/media/3D_parts.png)
 
 #### Links
 - [ESPHome LD2410 documentation](https://esphome.io/components/sensor/ld2410.html)
