@@ -1,0 +1,31 @@
+type: vertical-stack
+cards:
+  - type: tile
+    entity: binary_sensor.REPLACEME_presence
+    name: Human Presence Sensor
+  - type: horizontal-stack
+    cards:
+      - type: gauge
+        entity: sensor.REPLACEME_bh1750_illuminance
+        needle: false
+        name: Illuminance
+      - type: gauge
+        entity: sensor.REPLACEME_move_energy
+        name: Move Energy
+      - type: gauge
+        entity: sensor.REPLACEME_still_energy
+        name: Still Energy
+  - type: horizontal-stack
+    cards:
+      - type: glance
+        entities:
+          - entity: sensor.REPLACEME_detection_distance
+            name: Detection distance
+          - entity: sensor.REPLACEME_moving_distance
+            name: Moving distance
+          - entity: sensor.REPLACEME_still_distance
+            name: Still distance
+          - entity: binary_sensor.REPLACEME_still_target
+            name: Still Target
+          - entity: binary_sensor.REPLACEME_moving_target
+            name: Moving Target

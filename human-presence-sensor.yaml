@@ -1,0 +1,64 @@
+uart:
+  tx_pin: TX
+  rx_pin: RX
+  baud_rate: 256000
+  parity: NONE
+  stop_bits: 1
+
+i2c:
+  sda: 4
+  scl: 5
+  scan: true
+
+ld2410:
+  timeout: 30s
+  max_move_distance : 6m
+  max_still_distance: 0.75m
+  g0_move_threshold: 50
+  g0_still_threshold: 20
+  g1_move_threshold: 50
+  g1_still_threshold: 20
+  g2_move_threshold: 40
+  g2_still_threshold: 40
+  g3_move_threshold: 40
+  g3_still_threshold: 40
+  g4_move_threshold: 40
+  g4_still_threshold: 40
+  g5_move_threshold: 40
+  g5_still_threshold: 40
+  g6_move_threshold: 30
+  g6_still_threshold: 15
+  g7_move_threshold: 30
+  g7_still_threshold: 15
+  g8_move_threshold: 30
+  g8_still_threshold: 15
+
+sensor:
+  - platform: ld2410
+    moving_distance:
+      name : Moving Distance
+    still_distance:
+      name: Still Distance
+    moving_energy:
+      name: Move Energy
+    still_energy:
+      name: Still Energy
+    detection_distance:
+      name: Detection Distance
+
+  - platform: bh1750
+    name: BH1750 Illuminance
+    address: 0x23
+    update_interval: 60s
+
+binary_sensor:
+  - platform: ld2410
+    has_target:
+      name: Presence
+    has_moving_target:
+      name: Moving Target
+    has_still_target:
+      name: Still Target
+
+
+      
