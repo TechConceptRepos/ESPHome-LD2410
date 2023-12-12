@@ -169,7 +169,7 @@ instance.](https://my.home-assistant.io/badges/config_flow_start.svg)](https://m
 
 ### Enclosure
 - https://www.thingiverse.com/thing:6357902
-- https://cults3d.com/en/3d-model/tool/parkside-x20-to-worx
+- https://cults3d.com/en/3d-model/gadget/esphome-ld2410-human-presence-sensor
 
 You can choose between a long length case (with hidden micro USB connector), a short length case or a wall-mount type.
 
