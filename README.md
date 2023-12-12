@@ -1,4 +1,3 @@
-
 # ESPHome LD2410 Human Presence Sensor for Home Assistant
 ## Introduction
 This repository contains the setup for a human presence sensor designed for ESPHome, utilizing the WeMos D1 Mini, HLK-LD2410, and BH1750 modules.
@@ -8,10 +7,10 @@ This repository contains the setup for a human presence sensor designed for ESPH
 + **HLK-LD2410** -  Human Presence Sensor
 + **BH1750** - Ambient Light Sensor
 
-####Schematic
+#### Schematic
 ![](https://raw.githubusercontent.com/TechConceptRepos/ESPHome-LD2410/media/schema.png)
 
-####Pinout
+#### Pinout
 
 WeMos D1 Mini |  HLK-LD2410 | BH1750
 ------------- | ----------- | ------
@@ -22,11 +21,8 @@ RX *(GPIO03)* | TX          |
 D1 *(GPIO05)* |             | SCL 
 D2 *(GPIO04)* |             | SDA 
 
-####Flashing
+#### Flashing
 - [ESPHome Web](https://web.esphome.io/) - You can flash the Wemos D1 Mini using a web browser.
-
-
-
 
 ## Software
 ### BH1750 - Ambient Light Sensor
@@ -87,7 +83,7 @@ sensor:
       name: Still Energy
     detection_distance:
       name: Detection Distance
-	  
+
 binary_sensor:
   - platform: ld2410
     has_target:
@@ -98,7 +94,7 @@ binary_sensor:
       name: Still Target
 ```
 
-### Demo
+### Demo ([human-presence-sensor.yaml](human-presence-sensor.yaml))
 #### YAML
 ``` yaml
 uart:
@@ -163,8 +159,9 @@ binary_sensor:
     has_still_target:
       name: Still Target
 ```
-### Lovelace Card
-![](https://raw.githubusercontent.com/TechConceptRepos/ESPHome-LD2410/media/lovelace_card.png)
+
+### Lovelace Card ([lovelace-card.yaml](lovelace-card.yaml))
+![Lovelace Card](https://raw.githubusercontent.com/TechConceptRepos/ESPHome-LD2410/media/lovelace_card.png)
 
 ### ESPHome integration for Home Assistant 
 [![Add Integration to your Home Assistant
@@ -172,9 +169,11 @@ instance.](https://my.home-assistant.io/badges/config_flow_start.svg)](https://m
 
 ### Enclosure
 - https://www.thingiverse.com/thing:6357902
-- https://cults3d.com/en/3d-model/gadget/esphome-ld2410-human-presence-sensor
+- https://cults3d.com/en/3d-model/tool/parkside-x20-to-worx
+
 You can choose between a long length case (with hidden micro USB connector), a short length case or a wall-mount type.
-![](https://raw.githubusercontent.com/TechConceptRepos/ESPHome-LD2410/media/3D_parts.png)
+
+![3D Parts](https://raw.githubusercontent.com/TechConceptRepos/ESPHome-LD2410/media/3D_parts.png)
 
 #### Links
 - [ESPHome LD2410 documentation](https://esphome.io/components/sensor/ld2410.html)
